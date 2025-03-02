@@ -1,5 +1,5 @@
 # Random-dice-application
-# Мобильное приложение: generator.apk
+# Мобильное приложение: Dice - generator.apk
 
 * Java Amazon Corretto version 17.0.12
 * Junit 5
