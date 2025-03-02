@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id "io.qameta.allure" version "2.11.2"
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.seleniumhq.selenium:selenium-java:4.27.0'
+    implementation platform('org.junit:junit-bom:5.9.1')
+    implementation 'org.junit.jupiter:junit-jupiter'
+    implementation group: 'io.appium', name: 'java-client', version: '9.3.0'
+
+
+    implementation 'io.qameta.allure:allure-junit5:2.24.0'
+    implementation 'io.qameta.allure:allure-commandline:2.24.0'
+    implementation 'io.qameta.allure:allure-assertj:2.24.0'
+    implementation 'io.qameta.allure:allure-java-commons:2.24.0'
+    implementation 'io.qameta.allure:allure-selenide:2.24.0'
+
+
+
+    implementation 'org.hamcrest:hamcrest:3.0'
+    implementation 'org.assertj:assertj-core:3.26.3'
+
+}
+
+test {
+    useJUnitPlatform()
+}
