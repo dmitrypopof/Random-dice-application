@@ -10,10 +10,9 @@ import org.junit.jupiter.api.Test;
 import static org.example.screens.MainScreen.*;
 
 public class TestSmoke extends TestBase{
-
     @Test
-    @DisplayName("Элементы на главном экране")
-    @Description("Проверка всех элементов на главном экране")
+    @DisplayName("Elements main screen")
+    @Description("Check all elements")
     public void the1Test(){
         SoftAssertions softAssertions = new SoftAssertions();
 
@@ -30,8 +29,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Переходы по экранам ")
-    @Description("Перейти в другой экран и вернуться назад")
+    @DisplayName("Screen transitions")
+    @Description("Go to another screen and go back")
     public void the2Test(){
         SoftAssertions softAssertions = new SoftAssertions();
         //1:Number
@@ -70,8 +69,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Число")
-    @Description("Подкинуть 1 раз и проверить сообщение")
+    @DisplayName("Screen Number")
+    @Description("Drop it 1 time and check the message")
     public void the3Test(){
         boolean isGen = app.getMainScreen()
                 .clickNumbBut()
@@ -88,8 +87,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Список")
-    @Description("Вызвать 1 раз и проверить")
+    @DisplayName("Screen List")
+    @Description("Start 1 time and check")
     public void the4Test(){
         boolean isGen = app.getMainScreen()
                 .clickListBut()
@@ -107,8 +106,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Игральные Кости")
-    @Description("Подкинуть 1 раз кости и проверить элемент. Настройка на 6")
+    @DisplayName("Screen Coin")
+    @Description("Roll coin. To check after the inscription, Swipe up")
     public void The5Test(){
         boolean isGen = app.getMainScreen()
                 .clickDrawingBut()
@@ -125,8 +124,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Жребий")
-    @Description("Проверить описание. Бросить по умолчанию. Тап на завершение")
+    @DisplayName("ГђВ­ГђВєГ‘ВЂГђВ°ГђВЅ ГђВ–Г‘ВЂГђВµГђВ±ГђВёГђВ№")
+    @Description("ГђВџГ‘ВЂГђВѕГђВІГђВµГ‘ВЂГђВёГ‘В‚Г‘ВЊ ГђВѕГђВїГђВёГ‘ВЃГђВ°ГђВЅГђВёГђВµ. ГђВ‘Г‘ВЂГђВѕГ‘ВЃГђВёГ‘В‚Г‘ВЊ ГђВїГђВѕ Г‘ВѓГђВјГђВѕГђВ»Г‘В‡ГђВ°ГђВЅГђВёГ‘ВЋ. ГђВўГђВ°ГђВї ГђВЅГђВ° ГђВ·ГђВ°ГђВІГђВµГ‘ВЂГ‘В€ГђВµГђВЅГђВёГђВµ")
     public void The6Test(){
         boolean isGen = app.getMainScreen()
                 .clickDiceBut()
@@ -136,8 +135,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран монетка")
-    @Description("Подкинуть монетку. Проверить после надпись - Проведите вверх")
+    @DisplayName("ГђВ­ГђВєГ‘ВЂГђВ°ГђВЅ ГђВјГђВѕГђВЅГђВµГ‘В‚ГђВєГђВ°")
+    @Description("ГђВџГђВѕГђВґГђВєГђВёГђВЅГ‘ВѓГ‘В‚Г‘ВЊ ГђВјГђВѕГђВЅГђВµГ‘В‚ГђВєГ‘Вѓ. ГђВџГ‘ВЂГђВѕГђВІГђВµГ‘ВЂГђВёГ‘В‚Г‘ВЊ ГђВїГђВѕГ‘ВЃГђВ»ГђВµ ГђВЅГђВ°ГђВґГђВїГђВёГ‘ВЃГ‘ВЊ - ГђВџГ‘ВЂГђВѕГђВІГђВµГђВґГђВёГ‘В‚ГђВµ ГђВІГђВІГђВµГ‘ВЂГ‘В…")
     public void The7Test(){
         app.getMainScreen()
                 .clickCoinBut();

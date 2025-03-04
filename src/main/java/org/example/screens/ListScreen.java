@@ -14,32 +14,32 @@ public class ListScreen extends Screen{
         super(driver);
     }
 
-    public static final By LIST_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Список\")"); // Текст Список
+    public static final By LIST_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"РЎРїРёСЃРѕРє\")"); // РўРµРєСЃС‚ РЎРїРёСЃРѕРє
 
 
-    @Step("Проверка надписи Список")
-    @Description("Проверка надписи")
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё РЎРїРёСЃРѕРє")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё")
     public boolean isListText(){
         resetButtonOk();
         return driver.findElement(LIST_TEXT).isDisplayed();
     }
 
-    @Step("Сгенерировать выбор")
-    @Description("Тап по кнопке сгенерировать")
+    @Step("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РІС‹Р±РѕСЂ")
+    @Description("РўР°Рї РїРѕ РєРЅРѕРїРєРµ СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public ListScreen tapGenResult(){
         resetButtonOk();
         driver.findElement(UPDATE_BUT).click();
         return new ListScreen(driver);
     }
 
-    @Step("Результат генерации")
-    @Description("Результат генерации после тапа сгенерировать")
+    @Step("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё")
+    @Description("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё РїРѕСЃР»Рµ С‚Р°РїР° СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public boolean getResultGeneration(){
         return driver.findElement(GENERATE_RESULT).isDisplayed();
     }
 
 
-    @Step("Тапнуть на кнопку Понятно, если она есть")
+    @Step("РўР°РїРЅСѓС‚СЊ РЅР° РєРЅРѕРїРєСѓ РџРѕРЅСЏС‚РЅРѕ, РµСЃР»Рё РѕРЅР° РµСЃС‚СЊ")
     private void resetButtonOk(){
         try {
             driver.findElement(UNDESTAND_BUT).click();
@@ -48,29 +48,29 @@ public class ListScreen extends Screen{
         }
     }
 
-    @Step("Открыть настройки")
-    @Description("Открыть Параметры с настройками: повторение, количество, задержка")
+    @Step("РћС‚РєСЂС‹С‚СЊ РЅР°СЃС‚СЂРѕР№РєРё")
+    @Description("РћС‚РєСЂС‹С‚СЊ РџР°СЂР°РјРµС‚СЂС‹ СЃ РЅР°СЃС‚СЂРѕР№РєР°РјРё: РїРѕРІС‚РѕСЂРµРЅРёРµ, РєРѕР»РёС‡РµСЃС‚РІРѕ, Р·Р°РґРµСЂР¶РєР°")
     public ListScreen openSet(){
         driver.findElement(SET).click();
         return new ListScreen(driver);
     }
 
-    @Step("Переключить Задержка результата")
-    @Description("Тап на переключатель в окне Параметры")
+    @Step("РџРµСЂРµРєР»СЋС‡РёС‚СЊ Р—Р°РґРµСЂР¶РєР° СЂРµР·СѓР»СЊС‚Р°С‚Р°")
+    @Description("РўР°Рї РЅР° РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РІ РѕРєРЅРµ РџР°СЂР°РјРµС‚СЂС‹")
     public ListScreen tapSwithDelay(){
         driver.findElement(SET_SLEEP).click();
         return new ListScreen(driver);
     }
 
-    @Step("Применить")
-    @Description("Применить настройки в окне Параметры")
+    @Step("РџСЂРёРјРµРЅРёС‚СЊ")
+    @Description("РџСЂРёРјРµРЅРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё РІ РѕРєРЅРµ РџР°СЂР°РјРµС‚СЂС‹")
     public ListScreen tapSwithApply(){
         driver.findElement(SET_APPLY_SWITH).click();
         return new ListScreen(driver);
     }
 
-    @Step("получение значения Задержка по умолчанию")
-    @Description("Количество по умолчанию")
+    @Step("РїРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ Р—Р°РґРµСЂР¶РєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")
+    @Description("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")
     public String getTextSetCount(){
         return driver.findElement(SET_DELAY_SWITH).getText();
     }
