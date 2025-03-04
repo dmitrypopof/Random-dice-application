@@ -11,8 +11,8 @@ import static org.example.screens.MainScreen.*;
 
 public class TestSmoke extends TestBase{
     @Test
-    @DisplayName("Элементы на главном экране")
-    @Description("Проверка всех элементов на главном экране")
+    @DisplayName("Ð­Ð»ÐµÐ¼ÐµÐ½ÑÑ Ð½Ð° Ð³Ð»Ð°Ð²Ð½Ð¾Ð¼ ÑÐºÑÐ°Ð½Ðµ")
+    @Description("ÐÑÐ¾Ð²ÐµÑÐºÐ° Ð²ÑÐµÑ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð½Ð° Ð³Ð»Ð°Ð²Ð½Ð¾Ð¼ ÑÐºÑÐ°Ð½Ðµ")
     public void the1Test(){
         SoftAssertions softAssertions = new SoftAssertions();
 
@@ -29,8 +29,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Переходы по экранам ")
-    @Description("Перейти в другой экран и вернуться назад")
+    @DisplayName("ÐÐµÑÐµÑÐ¾Ð´Ñ Ð¿Ð¾ ÑÐºÑÐ°Ð½Ð°Ð¼ ")
+    @Description("ÐÐµÑÐµÐ¹ÑÐ¸ Ð² Ð´ÑÑÐ³Ð¾Ð¹ ÑÐºÑÐ°Ð½ Ð¸ Ð²ÐµÑÐ½ÑÑÑÑÑ Ð½Ð°Ð·Ð°Ð´")
     public void the2Test(){
         SoftAssertions softAssertions = new SoftAssertions();
         //1:Number
@@ -69,8 +69,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Число")
-    @Description("Подкинуть 1 раз и проверить сообщение")
+    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð§Ð¸ÑÐ»Ð¾")
+    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ 1 ÑÐ°Ð· Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ ÑÐ¾Ð¾Ð±ÑÐµÐ½Ð¸Ðµ")
     public void the3Test(){
         boolean isGen = app.getMainScreen()
                 .clickNumbBut()
@@ -87,8 +87,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Список")
-    @Description("Вызвать 1 раз и проверить")
+    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð¡Ð¿Ð¸ÑÐ¾Ðº")
+    @Description("ÐÑÐ·Ð²Ð°ÑÑ 1 ÑÐ°Ð· Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ")
     public void the4Test(){
         boolean isGen = app.getMainScreen()
                 .clickListBut()
@@ -106,8 +106,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Игральные Кости")
-    @Description("Подкинуть 1 раз кости и проверить элемент. Настройка на 6")
+    @DisplayName("Ð­ÐºÑÐ°Ð½ ÐÐ³ÑÐ°Ð»ÑÐ½ÑÐµ ÐÐ¾ÑÑÐ¸")
+    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ 1 ÑÐ°Ð· ÐºÐ¾ÑÑÐ¸ Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ. ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ° Ð½Ð° 6")
     public void The5Test(){
         boolean isGen = app.getMainScreen()
                 .clickDrawingBut()
@@ -124,8 +124,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран Жребий")
-    @Description("Проверить описание. Бросить по умолчанию. Тап на завершение")
+    @DisplayName("Ð­ÐºÑÐ°Ð½ ÐÑÐµÐ±Ð¸Ð¹")
+    @Description("ÐÑÐ¾Ð²ÐµÑÐ¸ÑÑ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ. ÐÑÐ¾ÑÐ¸ÑÑ Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ. Ð¢Ð°Ð¿ Ð½Ð° Ð·Ð°Ð²ÐµÑÑÐµÐ½Ð¸Ðµ")
     public void The6Test(){
         boolean isGen = app.getMainScreen()
                 .clickDiceBut()
@@ -135,8 +135,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Экран монетка")
-    @Description("Подкинуть монетку. Проверить после надпись - Проведите вверх")
+    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð¼Ð¾Ð½ÐµÑÐºÐ°")
+    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ Ð¼Ð¾Ð½ÐµÑÐºÑ. ÐÑÐ¾Ð²ÐµÑÐ¸ÑÑ Ð¿Ð¾ÑÐ»Ðµ Ð½Ð°Ð´Ð¿Ð¸ÑÑ - ÐÑÐ¾Ð²ÐµÐ´Ð¸ÑÐµ Ð²Ð²ÐµÑÑ")
     public void The7Test(){
         app.getMainScreen()
                 .clickCoinBut();
