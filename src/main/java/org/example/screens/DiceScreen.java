@@ -16,11 +16,11 @@ public class DiceScreen extends Screen{
         super(driver);
     }
 
-    public static final By DICE_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Жребий\")"); // Текст Жребий
+    public static final By DICE_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Р–СЂРµР±РёР№\")"); // РўРµРєСЃС‚ Р–СЂРµР±РёР№
     public static final By GENERATE_RESULT_DICE = AppiumBy.id("ru.uxapps.random:id/f_lots_result_rv");
 
-    @Step("Проверка надписи Жребий")
-    @Description("Проверка надписи")
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё Р–СЂРµР±РёР№")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё")
     public boolean isDiceText(){
         try {
             driver.findElement(UNDESTAND_BUT).click();
@@ -32,16 +32,16 @@ public class DiceScreen extends Screen{
 
 
 
-    @Step("Сгенерировать выбор")
-    @Description("Тап по кнопке сгенерировать")
+    @Step("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РІС‹Р±РѕСЂ")
+    @Description("РўР°Рї РїРѕ РєРЅРѕРїРєРµ СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public DiceScreen tapGenResult(){
         resetButtonOk();
         driver.findElement(UPDATE_BUT).click();
         return new DiceScreen(driver);
     }
 
-    @Step("Результат генерации")
-    @Description("Результат генерации после тапа сгенерировать")
+    @Step("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё")
+    @Description("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё РїРѕСЃР»Рµ С‚Р°РїР° СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public boolean getResultGeneration(){
         return driver.findElement(GENERATE_RESULT_DICE).isDisplayed();
     }

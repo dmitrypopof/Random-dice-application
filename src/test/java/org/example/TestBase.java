@@ -27,7 +27,7 @@ public class TestBase {
 
     @AfterEach
     public void tearDown() {
-        //driver.terminateApp("ru.uxapps.random");
+        //driver.terminateApp("");
         driver.quit();
     }
 

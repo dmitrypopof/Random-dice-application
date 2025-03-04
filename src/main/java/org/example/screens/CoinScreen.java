@@ -17,18 +17,18 @@ public class CoinScreen extends Screen{
         super(driver);
     }
 
-    public static final By COIN_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Монетка\")"); // Текст Монеты
+    public static final By COIN_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"РњРѕРЅРµС‚РєР°\")"); // РўРµРєСЃС‚ РњРѕРЅРµС‚С‹
 
     public static final By GENERATE_RESULT_COIN = AppiumBy.id("ru.uxapps.random:id/f_coin_img");
 
-    @Step("Проверка надписи Монетка")
-    @Description("Проверка надписи")
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё РњРѕРЅРµС‚РєР°")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё")
     public boolean isCoinText(){
         return driver.findElement(COIN_TEXT).isDisplayed();
     }
 
-    @Step("Результат генерации")
-    @Description("Результат генерации после свайпа сгенерировать")
+    @Step("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё")
+    @Description("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё РїРѕСЃР»Рµ СЃРІР°Р№РїР° СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public boolean getResultGeneration(){
         driver.manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
 

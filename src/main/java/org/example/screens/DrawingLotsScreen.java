@@ -18,46 +18,46 @@ public class DrawingLotsScreen extends Screen{
 
     public static final By GENERATE_RESULT_DARW = AppiumBy.id("ru.uxapps.random:id/dice_result_rv");
 
-    public static final By DRAW_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Игральные кости\")"); // Текст Игральные кости
+    public static final By DRAW_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"РРіСЂР°Р»СЊРЅС‹Рµ РєРѕСЃС‚Рё\")"); // РўРµРєСЃС‚ РРіСЂР°Р»СЊРЅС‹Рµ РєРѕСЃС‚Рё
     public static final By OTHER_RADIO_BUTTON = AppiumBy.id("ru.uxapps.random:id/quantity_other_rb");
     public static final By SEND_COUNT_DRAW = AppiumBy.id("ru.uxapps.random:id/other_quantity_et");
-    @Step("Проверка надписи Игральные кости")
-    @Description("Проверка надписи")
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё РРіСЂР°Р»СЊРЅС‹Рµ РєРѕСЃС‚Рё")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё")
     public boolean isDrawText(){
         return driver.findElement(DRAW_TEXT).isDisplayed();
     }
 
-    @Step("Сгенерировать выбор")
-    @Description("Тап по кнопке сгенерировать")
+    @Step("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ РІС‹Р±РѕСЂ")
+    @Description("РўР°Рї РїРѕ РєРЅРѕРїРєРµ СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public DrawingLotsScreen tapGenResult(){
         driver.findElement(UPDATE_BUT).click();
         return new DrawingLotsScreen(driver);
     }
 
-    @Step("Результат генерации")
-    @Description("Результат генерации после тапа сгенерировать")
+    @Step("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё")
+    @Description("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё РїРѕСЃР»Рµ С‚Р°РїР° СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
     public boolean getResultGeneration(){
         return driver.findElement(GENERATE_RESULT_DARW).isDisplayed();
     }
 
 
-    @Step("Выбор Другое")
-    @Description("Выбор Другое по количеству кубиков")
+    @Step("Р’С‹Р±РѕСЂ Р”СЂСѓРіРѕРµ")
+    @Description("Р’С‹Р±РѕСЂ Р”СЂСѓРіРѕРµ РїРѕ РєРѕР»РёС‡РµСЃС‚РІСѓ РєСѓР±РёРєРѕРІ")
     public DrawingLotsScreen tapOther(){
         driver.findElement(OTHER_RADIO_BUTTON).click();
         return new DrawingLotsScreen(driver);
     }
 
-    @Step("Ввод количества кубиков")
-    @Description("Ввод количества кубиков")
+    @Step("Р’РІРѕРґ РєРѕР»РёС‡РµСЃС‚РІР° РєСѓР±РёРєРѕРІ")
+    @Description("Р’РІРѕРґ РєРѕР»РёС‡РµСЃС‚РІР° РєСѓР±РёРєРѕРІ")
     public DrawingLotsScreen sendDrawLot(String count){
         driver.findElement(SEND_COUNT_DRAW).sendKeys(count);
         driver.pressKey(new KeyEvent(AndroidKey.DPAD_RIGHT));
         return new DrawingLotsScreen(driver);
     }
 
-    @Step("получение значения количества кубиков")
-    @Description("получение значения количества кубиков. Кастомная настройка")
+    @Step("РїРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° РєСѓР±РёРєРѕРІ")
+    @Description("РїРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ РєРѕР»РёС‡РµСЃС‚РІР° РєСѓР±РёРєРѕРІ. РљР°СЃС‚РѕРјРЅР°СЏ РЅР°СЃС‚СЂРѕР№РєР°")
     public String getTextSetCount(){
         return driver.findElement(SEND_COUNT_DRAW).getText();
     }

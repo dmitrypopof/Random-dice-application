@@ -11,14 +11,15 @@ import org.openqa.selenium.interactions.Sequence;
 import java.time.Duration;
 import java.util.Arrays;
 
-public class NavigationHelper extends Screen{
+public class NavigationHelper extends Screen {
+
 
     public NavigationHelper(AndroidDriver driver) {
         super(driver);
     }
 
-    @Step("Свайп по коррдинатам")
-    public NavigationHelper swipeUIAutomator(){
+    @Step("РЎРІР°Р№Рї РїРѕ РєРѕСЂСЂРґРёРЅР°С‚Р°Рј")
+    public NavigationHelper swipeUIAutomator() {
 
         final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         var start = new Point(710, 2600);
@@ -35,9 +36,9 @@ public class NavigationHelper extends Screen{
         return new NavigationHelper(driver);
     }
 
-    @Step("Тап в свободное место") // x=330, y=780, pause=50
-    @Description("Тап в свободное место для закрытия всплывающего окна")
-    public NavigationHelper tapFree (int x, int y, int pause){
+    @Step("РўР°Рї РІ СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ") // x=330, y=780, pause=50
+    @Description("РўР°Рї РІ СЃРІРѕР±РѕРґРЅРѕРµ РјРµСЃС‚Рѕ РґР»СЏ Р·Р°РєСЂС‹С‚РёСЏ РІСЃРїР»С‹РІР°СЋС‰РµРіРѕ РѕРєРЅР°")
+    public NavigationHelper tapFree(int x, int y, int pause) {
         final var finger = new PointerInput(PointerInput.Kind.TOUCH, "finger");
         var tapPoint = new Point(x, y);
         var tap = new Sequence(finger, 1);

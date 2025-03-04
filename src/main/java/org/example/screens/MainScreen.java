@@ -7,68 +7,70 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 
 
-public class MainScreen extends Screen{
+public class MainScreen extends Screen {
     public MainScreen(AndroidDriver driver) {
         super(driver);
     }
 
-    public static final By TEXT_SCREEN = AppiumBy.androidUIAutomator("new UiSelector().text(\"Случайное число UX\")");// Название приложения на экране
-    public static final By OPTION_BUTTON = AppiumBy.accessibilityId("Ещё"); // Кебаб ЕЩЕ (правый верхний угол)
+    public static final By TEXT_SCREEN = AppiumBy.androidUIAutomator("new UiSelector().text(\"РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ UX\")");// РќР°Р·РІР°РЅРёРµ РїСЂРёР»РѕР¶РµРЅРёСЏ РЅР° СЌРєСЂР°РЅРµ
+    public static final By OPTION_BUTTON = AppiumBy.accessibilityId("Р•С‰С‘"); // РљРµР±Р°Р± Р•Р©Р• (РїСЂР°РІС‹Р№ РІРµСЂС…РЅРёР№ СѓРіРѕР»)
 
-    public static final By NUMBER_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"ЧИСЛО\")"); // Переход на экран Число
-    public static final By LIST_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"СПИСОК\")"); // Переход на экран Список
-    public static final By PLUS_LIST_BUTTON = AppiumBy.accessibilityId("Новый список");// Кнопка плюс (создать новый список)
-    public static final By OPTION_LIST_BUTTON = AppiumBy.accessibilityId("Меню"); // Кебаб настройки созданного списка
-    public static final By LIST_RENAME = AppiumBy.androidUIAutomator("new UiSelector().text(\"Переименовать\")"); // Переименовать созданный список
-    public static final By LIST_DELETE = AppiumBy.androidUIAutomator("new UiSelector().text(\"Удалить\")"); // Удалить созданный список
-    public static final By DRAWINGLOT_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"ИГРАЛЬНЫЕ КОСТИ\")"); // Переход на экран Игральные кости
-    public static final By DICE_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"ЖРЕБИЙ\")"); // Переход на экран Жребий
-    public static final By COIN_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"МОНЕТКА\")"); // Переход на экран Монетка
+    public static final By NUMBER_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"Р§РРЎР›Рћ\")"); // РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ Р§РёСЃР»Рѕ
+    public static final By LIST_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"РЎРџРРЎРћРљ\")"); // РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РЎРїРёСЃРѕРє
+    public static final By PLUS_LIST_BUTTON = AppiumBy.accessibilityId("РќРѕРІС‹Р№ СЃРїРёСЃРѕРє");// РљРЅРѕРїРєР° РїР»СЋСЃ (СЃРѕР·РґР°С‚СЊ РЅРѕРІС‹Р№ СЃРїРёСЃРѕРє)
+    public static final By OPTION_LIST_BUTTON = AppiumBy.accessibilityId("РњРµРЅСЋ"); // РљРµР±Р°Р± РЅР°СЃС‚СЂРѕР№РєРё СЃРѕР·РґР°РЅРЅРѕРіРѕ СЃРїРёСЃРєР°
+    public static final By LIST_RENAME = AppiumBy.androidUIAutomator("new UiSelector().text(\"РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ\")"); // РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє
+    public static final By LIST_DELETE = AppiumBy.androidUIAutomator("new UiSelector().text(\"РЈРґР°Р»РёС‚СЊ\")"); // РЈРґР°Р»РёС‚СЊ СЃРѕР·РґР°РЅРЅС‹Р№ СЃРїРёСЃРѕРє
+    public static final By DRAWINGLOT_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"РР“Р РђР›Р¬РќР«Р• РљРћРЎРўР\")"); // РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РРіСЂР°Р»СЊРЅС‹Рµ РєРѕСЃС‚Рё
+    public static final By DICE_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"Р–Р Р•Р‘РР™\")"); // РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ Р–СЂРµР±РёР№
+    public static final By COIN_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().text(\"РњРћРќР•РўРљРђ\")"); // РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РњРѕРЅРµС‚РєР°
 
-    //Раздел Еще:
-    public static final By ESTIMATE = AppiumBy.androidUIAutomator("new UiSelector().text(\"Оценить\")"); // Оценить
-    public static final By BUY_PREMIUM = AppiumBy.androidUIAutomator("new UiSelector().text(\"Купить Премиум\")"); // Купить Премиум
-    public static final By THEME_DESIGN = AppiumBy.androidUIAutomator("new UiSelector().text(\"Тема оформления\")"); // Тема оформления
-    public static final By CONTACT_US = AppiumBy.androidUIAutomator("new UiSelector().text(\"Связаться с нами\")"); // Связаться с нами
-    public static final By CONDENFENDEN = AppiumBy.androidUIAutomator("new UiSelector().text(\"Конфиденциальность\")"); // Конфиденциальность
-    public static final By ABOUT_APP = AppiumBy.androidUIAutomator("new UiSelector().text(\"Рассказать о приложении\")"); // Рассказать о приложении
-
-
+    //Р Р°Р·РґРµР» Р•С‰Рµ:
+    public static final By ESTIMATE = AppiumBy.androidUIAutomator("new UiSelector().text(\"РћС†РµРЅРёС‚СЊ\")"); // РћС†РµРЅРёС‚СЊ
+    public static final By BUY_PREMIUM = AppiumBy.androidUIAutomator("new UiSelector().text(\"РљСѓРїРёС‚СЊ РџСЂРµРјРёСѓРј\")"); // РљСѓРїРёС‚СЊ РџСЂРµРјРёСѓРј
+    public static final By THEME_DESIGN = AppiumBy.androidUIAutomator("new UiSelector().text(\"РўРµРјР° РѕС„РѕСЂРјР»РµРЅРёСЏ\")"); // РўРµРјР° РѕС„РѕСЂРјР»РµРЅРёСЏ
+    public static final By CONTACT_US = AppiumBy.androidUIAutomator("new UiSelector().text(\"РЎРІСЏР·Р°С‚СЊСЃСЏ СЃ РЅР°РјРё\")"); // РЎРІСЏР·Р°С‚СЊСЃСЏ СЃ РЅР°РјРё
+    public static final By CONDENFENDEN = AppiumBy.androidUIAutomator("new UiSelector().text(\"РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ\")"); // РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ
+    public static final By ABOUT_APP = AppiumBy.androidUIAutomator("new UiSelector().text(\"Р Р°СЃСЃРєР°Р·Р°С‚СЊ Рѕ РїСЂРёР»РѕР¶РµРЅРёРё\")"); // Р Р°СЃСЃРєР°Р·Р°С‚СЊ Рѕ РїСЂРёР»РѕР¶РµРЅРёРё
 
 
-    @Step("Проверка названия приложения - Случайное число UX")
-    @Description("Проверка названия приложения - Случайное число UX")
-    public boolean isTextScreen(){
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°Р·РІР°РЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ - РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ UX")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°Р·РІР°РЅРёСЏ РїСЂРёР»РѕР¶РµРЅРёСЏ - РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ UX")
+    public boolean isTextScreen() {
         return driver.findElement(TEXT_SCREEN).isDisplayed();
     }
 
-    @Step("Переход на экран Число")
-    @Description("Переход на экран Число")
-    public NumberScreen clickNumbBut(){
+    @Step("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ Р§РёСЃР»Рѕ")
+    @Description("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ Р§РёСЃР»Рѕ")
+    public NumberScreen clickNumbBut() {
         driver.findElement(NUMBER_BUTTON).click();
         return new NumberScreen(driver);
     }
+
     @Step
-    @Description("Переход на экран Список")
-    public ListScreen clickListBut(){
+    @Description("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РЎРїРёСЃРѕРє")
+    public ListScreen clickListBut() {
         driver.findElement(LIST_BUTTON).click();
         return new ListScreen(driver);
     }
+
     @Step
-    @Description("Переход на экран Игральные кости")
-    public DrawingLotsScreen clickDrawingBut(){
+    @Description("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РРіСЂР°Р»СЊРЅС‹Рµ РєРѕСЃС‚Рё")
+    public DrawingLotsScreen clickDrawingBut() {
         driver.findElement(DRAWINGLOT_BUTTON).click();
         return new DrawingLotsScreen(driver);
     }
+
     @Step
-    @Description("Переход на экран Жребий")
-    public DiceScreen clickDiceBut(){
+    @Description("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ Р–СЂРµР±РёР№")
+    public DiceScreen clickDiceBut() {
         driver.findElement(DICE_BUTTON).click();
         return new DiceScreen(driver);
     }
+
     @Step
-    @Description("Переход на экран Монетка")
-    public CoinScreen clickCoinBut(){
+    @Description("РџРµСЂРµС…РѕРґ РЅР° СЌРєСЂР°РЅ РњРѕРЅРµС‚РєР°")
+    public CoinScreen clickCoinBut() {
         driver.findElement(COIN_BUTTON).click();
         return new CoinScreen(driver);
     }

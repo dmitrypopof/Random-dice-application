@@ -8,67 +8,66 @@ import org.openqa.selenium.By;
 
 import static org.example.screens.CommonsButtonScreen.*;
 
-public class NumberScreen extends Screen{
+public class NumberScreen extends Screen {
     public NumberScreen(AndroidDriver driver) {
         super(driver);
     }
-    public static final By BACK_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageButton\").instance(0)"); // Назад
-    public static final By NUMBER_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Число\")"); // Текст Число
+
+    public static final By BACK_BUTTON = AppiumBy.androidUIAutomator("new UiSelector().className(\"android.widget.ImageButton\").instance(0)"); // РќР°Р·Р°Рґ
+    public static final By NUMBER_TEXT = AppiumBy.androidUIAutomator("new UiSelector().text(\"Р§РёСЃР»Рѕ\")"); // РўРµРєСЃС‚ Р§РёСЃР»Рѕ
 
 
-    @Step("Назад")
-    @Description("Тап на кнопку Назад")
-    public MainScreen clickBackBut(){
+    @Step("РќР°Р·Р°Рґ")
+    @Description("РўР°Рї РЅР° РєРЅРѕРїРєСѓ РќР°Р·Р°Рґ")
+    public MainScreen clickBackBut() {
         driver.findElement(BACK_BUTTON).click();
         return new MainScreen(driver);
     }
 
-    @Step("Проверка надписи Число")
-    @Description("Проверка надписи")
-    public boolean isNumberText(){
+    @Step("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё Р§РёСЃР»Рѕ")
+    @Description("РџСЂРѕРІРµСЂРєР° РЅР°РґРїРёСЃРё")
+    public boolean isNumberText() {
         return driver.findElement(NUMBER_TEXT).isDisplayed();
     }
 
-    @Step("Сгенерировать результат")
-    @Description("Сгенерировать результат")
-    public NumberScreen tapGeneration(){
+    @Step("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚")
+    @Description("РЎРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ СЂРµР·СѓР»СЊС‚Р°С‚")
+    public NumberScreen tapGeneration() {
         driver.findElement(UPDATE_BUT).click();
         return new NumberScreen(driver);
     }
 
-    @Step("Результат генерации")
-    @Description("Результат генерации после тапа сгенерировать")
-    public boolean getResultGeneration(){
+    @Step("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё")
+    @Description("Р РµР·СѓР»СЊС‚Р°С‚ РіРµРЅРµСЂР°С†РёРё РїРѕСЃР»Рµ С‚Р°РїР° СЃРіРµРЅРµСЂРёСЂРѕРІР°С‚СЊ")
+    public boolean getResultGeneration() {
         return driver.findElement(GENERATE_RESULT).isDisplayed();
     }
 
-    @Step("Открыть настройки")
-    @Description("Открыть Параметры с настройками: повторение, количество, задержка")
-    public NumberScreen openSet(){
+    @Step("РћС‚РєСЂС‹С‚СЊ РЅР°СЃС‚СЂРѕР№РєРё")
+    @Description("РћС‚РєСЂС‹С‚СЊ РџР°СЂР°РјРµС‚СЂС‹ СЃ РЅР°СЃС‚СЂРѕР№РєР°РјРё: РїРѕРІС‚РѕСЂРµРЅРёРµ, РєРѕР»РёС‡РµСЃС‚РІРѕ, Р·Р°РґРµСЂР¶РєР°")
+    public NumberScreen openSet() {
         driver.findElement(SET).click();
         return new NumberScreen(driver);
     }
 
-    @Step("Переключить Количество")
-    @Description("Тап на переключатель в окне Параметры")
-    public NumberScreen tapSwithCount(){
+    @Step("РџРµСЂРµРєР»СЋС‡РёС‚СЊ РљРѕР»РёС‡РµСЃС‚РІРѕ")
+    @Description("РўР°Рї РЅР° РїРµСЂРµРєР»СЋС‡Р°С‚РµР»СЊ РІ РѕРєРЅРµ РџР°СЂР°РјРµС‚СЂС‹")
+    public NumberScreen tapSwithCount() {
         driver.findElement(SET_COUNT_SWITH).click();
         return new NumberScreen(driver);
     }
 
-    @Step("Применить")
-    @Description("Применить настройки в окне Параметры")
-    public NumberScreen tapSwithApply(){
+    @Step("РџСЂРёРјРµРЅРёС‚СЊ")
+    @Description("РџСЂРёРјРµРЅРёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё РІ РѕРєРЅРµ РџР°СЂР°РјРµС‚СЂС‹")
+    public NumberScreen tapSwithApply() {
         driver.findElement(SET_APPLY_SWITH).click();
         return new NumberScreen(driver);
     }
 
-    @Step("Количество по умолчанию")
-    @Description("Количество по умолчанию")
-    public String getTextSetCount(){
+    @Step("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")
+    @Description("РљРѕР»РёС‡РµСЃС‚РІРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")
+    public String getTextSetCount() {
         return driver.findElement(SET_COUNT).getText();
     }
-
-
 
 }
