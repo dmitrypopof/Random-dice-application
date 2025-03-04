@@ -11,8 +11,8 @@ import static org.example.screens.MainScreen.*;
 
 public class TestSmoke extends TestBase{
     @Test
-    @DisplayName("Ð­Ð»ÐµÐ¼ÐµÐ½ÑÑ Ð½Ð° Ð³Ð»Ð°Ð²Ð½Ð¾Ð¼ ÑÐºÑÐ°Ð½Ðµ")
-    @Description("ÐÑÐ¾Ð²ÐµÑÐºÐ° Ð²ÑÐµÑ ÑÐ»ÐµÐ¼ÐµÐ½ÑÐ¾Ð² Ð½Ð° Ð³Ð»Ð°Ð²Ð½Ð¾Ð¼ ÑÐºÑÐ°Ð½Ðµ")
+    @DisplayName("Elements main screen")
+    @Description("Check all elements")
     public void the1Test(){
         SoftAssertions softAssertions = new SoftAssertions();
 
@@ -29,8 +29,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("ÐÐµÑÐµÑÐ¾Ð´Ñ Ð¿Ð¾ ÑÐºÑÐ°Ð½Ð°Ð¼ ")
-    @Description("ÐÐµÑÐµÐ¹ÑÐ¸ Ð² Ð´ÑÑÐ³Ð¾Ð¹ ÑÐºÑÐ°Ð½ Ð¸ Ð²ÐµÑÐ½ÑÑÑÑÑ Ð½Ð°Ð·Ð°Ð´")
+    @DisplayName("Screen transitions")
+    @Description("Go to another screen and go back")
     public void the2Test(){
         SoftAssertions softAssertions = new SoftAssertions();
         //1:Number
@@ -69,8 +69,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð§Ð¸ÑÐ»Ð¾")
-    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ 1 ÑÐ°Ð· Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ ÑÐ¾Ð¾Ð±ÑÐµÐ½Ð¸Ðµ")
+    @DisplayName("Screen Number")
+    @Description("Drop it 1 time and check the message")
     public void the3Test(){
         boolean isGen = app.getMainScreen()
                 .clickNumbBut()
@@ -87,8 +87,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð¡Ð¿Ð¸ÑÐ¾Ðº")
-    @Description("ÐÑÐ·Ð²Ð°ÑÑ 1 ÑÐ°Ð· Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ")
+    @DisplayName("Screen List")
+    @Description("Start 1 time and check")
     public void the4Test(){
         boolean isGen = app.getMainScreen()
                 .clickListBut()
@@ -106,8 +106,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Ð­ÐºÑÐ°Ð½ ÐÐ³ÑÐ°Ð»ÑÐ½ÑÐµ ÐÐ¾ÑÑÐ¸")
-    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ 1 ÑÐ°Ð· ÐºÐ¾ÑÑÐ¸ Ð¸ Ð¿ÑÐ¾Ð²ÐµÑÐ¸ÑÑ ÑÐ»ÐµÐ¼ÐµÐ½Ñ. ÐÐ°ÑÑÑÐ¾Ð¹ÐºÐ° Ð½Ð° 6")
+    @DisplayName("Screen Coin")
+    @Description("Roll coin. To check after the inscription, Swipe up")
     public void The5Test(){
         boolean isGen = app.getMainScreen()
                 .clickDrawingBut()
