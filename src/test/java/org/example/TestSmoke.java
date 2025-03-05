@@ -106,8 +106,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Screen Coin")
-    @Description("Roll coin. To check after the inscription, Swipe up")
+    @DisplayName("Screen Dice")
+    @Description("Roll the dice 1 time and check the element. Setting to 6")
     public void The5Test(){
         boolean isGen = app.getMainScreen()
                 .clickDrawingBut()
@@ -124,8 +124,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Ð­ÐºÑÐ°Ð½ ÐÑÐµÐ±Ð¸Ð¹")
-    @Description("ÐÑÐ¾Ð²ÐµÑÐ¸ÑÑ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ. ÐÑÐ¾ÑÐ¸ÑÑ Ð¿Ð¾ ÑÐ¼Ð¾Ð»ÑÐ°Ð½Ð¸Ñ. Ð¢Ð°Ð¿ Ð½Ð° Ð·Ð°Ð²ÐµÑÑÐµÐ½Ð¸Ðµ")
+    @DisplayName("Screen Draw")
+    @Description("Check description. Roll by default. Tap on completion")
     public void The6Test(){
         boolean isGen = app.getMainScreen()
                 .clickDiceBut()
@@ -135,8 +135,8 @@ public class TestSmoke extends TestBase{
     }
 
     @Test
-    @DisplayName("Ð­ÐºÑÐ°Ð½ Ð¼Ð¾Ð½ÐµÑÐºÐ°")
-    @Description("ÐÐ¾Ð´ÐºÐ¸Ð½ÑÑÑ Ð¼Ð¾Ð½ÐµÑÐºÑ. ÐÑÐ¾Ð²ÐµÑÐ¸ÑÑ Ð¿Ð¾ÑÐ»Ðµ Ð½Ð°Ð´Ð¿Ð¸ÑÑ - ÐÑÐ¾Ð²ÐµÐ´Ð¸ÑÐµ Ð²Ð²ÐµÑÑ")
+    @DisplayName("Screen Coin")
+    @Description("Roll coin. To check after the inscription, Swipe up")
     public void The7Test(){
         app.getMainScreen()
                 .clickCoinBut();
